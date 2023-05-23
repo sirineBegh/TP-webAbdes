@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu</title>
+
+    <!-- Balise meta pour un site "responsive" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Inclusion de bootstrap -->
+    <link rel="stylesheet" href="styles/libExterne/bootstrap.css">
+
+    <!-- Mes styles -->
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/jeu.css">
+
+    <!-- Scripts pour jQuery et Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="js/librairie/bootstrap.bundle.js"></script>
+
+    <!-- Scripts pour cryptage des mots de passe -->
+    <script src="js/librairie/core.js"></script>
+    <script src="js/librairie/md5.js"></script>
+
+    <!-- Mes scripts -->
+    <script src="js/commun.js"></script>
+    <script src="js/gestionAbonnes.js"></script>
+    <script src="js/jogger.js"></script>
+</head>
+<body>
+    <!-- Zone commune à toutes les pages : en-tête -->
+    <header>
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title"><b><i>S P R I N T Y</i></b></h1>
+                <p class="header-subtitle"><b>!!COUR A TON PROPRE RYTHME!!</b></p>
+            </div>
+        </header>
+    </header>
+    <!-- Zone commune à toutes les pages : Barre de navigation incluant zone d'affichage du pseudonyme de l'abonné authentifié -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">CONNEXION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jogger.html">SPRINT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- Zone spécifique à la page courante -->
+    <main>
+        <div id="zoneJeu">
+            <div id="zoneNiveau">Niveau <span>1</span></div>
+            <div id="zonePointage">Pts <span>0</span></div>
+            <div id="zoneRebours">Temps <span>03:00</span></div>
+
+            <img id="personnage" src="images/Marche0.png" alt="Garcon">
+
+            <!-- On place temporairement un obstacle pour voir sa position. -->
+            <div class="obstacle"></div>
+
+        </div>
+        <div id="boutons">
+            <button id="btnAide" type="button">Aide</button>
+            <button id="btnGo" type="button">Go</button>
+            <button id="btnRecords" type="button" data-toggle="tab" href="#f1">Records</button>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade" id="f1">
+                <table id="scoreTable">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Score rows will be dynamically added here -->
+                    </tbody>
+                  </table>
+        </div>
+    </main>
+    <!-- Zone commune à toutes les pages : Pied de page -->
+    <footer>
+        <b><i>© ABDESSALAM BENMACHICHE , CÉGEP ANDRÉ-LAURENDEAU , HIVER 2023</i></b>
+    </footer>
+</body>
+</html>

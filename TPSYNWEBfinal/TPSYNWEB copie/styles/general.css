@@ -1,0 +1,77 @@
+/* Styles généraux pour toutes les pages */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*
+	Permet d'ajuster la taille de la police du texte en fonction de la largeur du navigateur sur les
+	plus petits écrans.
+*/
+@media (max-width: 768px) {
+    * {
+        font-size: 2vw;
+    }
+}
+
+/* Code temporaire */
+header, nav, main, footer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,138,255,1) 50%, rgba(131,58,180,1) 100%);
+}
+
+header {
+    background-color: lightblue;
+    width: 80%;
+    min-height: 80px;
+    border-radius: 30px;
+}
+
+nav {
+    background-color: lightpink;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+main {
+    background-color: lightgrey;
+
+}
+
+footer {
+    background-color: lightgoldenrodyellow;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+html {
+    height:100vh;
+}
+
+body {
+    height: 100vh;
+    background: rgb(253,138,255);
+    background: linear-gradient(90deg, rgba(253,138,255,1) 0%, rgba(131,58,180,1) 50%, rgba(253,138,255,1) 100%);
+    color: white;
+}
+
+button {
+    border-radius: 30px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,138,255,1) 50%, rgba(131,58,180,1) 100%);
+    color: white;
+}
+
+input {
+    width: 50vw;
+    text-align: center;
+
+}
+
+a[placeholder="2 à 10 caractères : lettres/chiffres"] , a[placeholder="5 à 20 caractères : lettres/chiffres/espace 2 mots 3 occurences de la lettre A"] {
+    width: 50vw;
+}
+

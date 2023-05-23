@@ -1,0 +1,113 @@
+body {
+    text-align: center;
+}
+
+#zoneJeu {
+    margin: 0 auto 10px;
+
+    /* Permet de maintenir un ratio largeur/hauteur constant pour ce div. */
+    /* Dimension de la zone : 50% de la résolution de l'image originale qui servira d'arrière-plan */
+    padding-top: 50%;
+
+    /* Dimensions hardcodées au départ */
+    max-width: 1152px; /* À retirer lorsque votre projet sera terminé. */
+    max-height: 576px; /* À retirer lorsque votre projet sera terminé. */
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    position: relative;
+    overflow: hidden;
+}
+
+#zoneNiveau {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#zonePointage {
+    position: absolute;
+    top: 10px;
+    width: 300px;
+    left: calc(50% - 150px);
+}
+
+#zoneRebours {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#personnage {
+    position: absolute;
+}
+
+.sauter {
+    animation: jumpAnimation 0.5s;
+}
+
+@keyframes jumpAnimation {
+    0% {
+      transform: translateY(0);
+    } 
+    50% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+/*
+    On définit une animation CSS pour le saut du personnage. Sera déclenchée par le joueur (commande au clavier).
+*/
+/* À compléter ... */
+
+.obstacle {
+    position: absolute;
+    border-radius: 50%;
+    background-image: url("../images/obstacle.png");
+    background-size: contain;
+    animation: roule 0.75s infinite linear;
+}
+
+/*
+    On définit une animation CSS pour simuler la rotation des obstacles pendant leur déplacement vers la gauche.
+*/
+@keyframes roule {
+    to {
+        transform: rotate(-360deg)
+    }
+}
+
+.piece {
+    position: absolute;
+    background-image: url("../images/piece.png");
+    background-size: contain;
+    border-radius: 50%;
+    font-size: 80%;
+    color: black;
+}
+
+/*
+    Code temporaire pour visualiser les 3 types de pièces.
+    À retirer lorsque votre projet sera terminé.
+*/
+.piece1 {
+    width: 80px; /* Sera inutile lorsque votre projet sera terminé. */
+    height: 80px; /* Sera inutile lorsque votre projet sera terminé. */
+    line-height: 80px; /* Sera inutile lorsque votre projet sera terminé. */
+}
+
+.piece2 {
+    width: 60px; /* Sera inutile lorsque votre projet sera terminé. */
+    height: 60px; /* Sera inutile lorsque votre projet sera terminé. */
+    line-height: 60px; /* Sera inutile lorsque votre projet sera terminé. */
+}
+
+.piece3 {
+    width: 40px; /* Sera inutile lorsque votre projet sera terminé. */
+    height: 40px; /* Sera inutile lorsque votre projet sera terminé. */
+    line-height: 40px; /* Sera inutile lorsque votre projet sera terminé. */
+}
